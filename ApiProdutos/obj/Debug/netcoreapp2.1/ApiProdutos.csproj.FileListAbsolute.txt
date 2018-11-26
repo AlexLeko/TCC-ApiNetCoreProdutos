@@ -1,0 +1,14 @@
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\bin\Debug\netcoreapp2.1\ApiProdutos.deps.json
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\bin\Debug\netcoreapp2.1\ApiProdutos.runtimeconfig.json
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\bin\Debug\netcoreapp2.1\ApiProdutos.runtimeconfig.dev.json
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\bin\Debug\netcoreapp2.1\ApiProdutos.dll
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\bin\Debug\netcoreapp2.1\ApiProdutos.pdb
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.csproj.CoreCompileInputs.cache
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.RazorAssemblyInfo.cache
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.RazorAssemblyInfo.cs
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.AssemblyInfoInputs.cache
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.AssemblyInfo.cs
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.RazorTargetAssemblyInfo.cache
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.dll
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.pdb
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.csprojResolveAssemblyReference.cache
