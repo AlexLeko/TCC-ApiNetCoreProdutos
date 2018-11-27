@@ -18,8 +18,5 @@ namespace ApiProdutos.Repository.Interface
 
         Task<bool> Delete(int codigo);
 
-        Task<Categoria> GetTitulo(string titulo);
-
-
     }
 }

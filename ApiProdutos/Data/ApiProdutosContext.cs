@@ -16,8 +16,7 @@ namespace ApiProdutos.Data
             _db = client.GetDatabase(options.Value.Database);
         }
 
-        public IMongoCollection<Produto> Produtos => _db.GetCollection<Produto>("Produtos");
-        public IMongoCollection<Categoria> Categorias => _db.GetCollection<Categoria>("Categorias");
+        public IMongoCollection<Produto> Produtos => _db.GetCollection<Produto>("ProdutosNetCore");
 
     }
 }

@@ -1,6 +1,4 @@
 ﻿using ApiProdutos.Models;
-using ApiProdutos.Models.ViewModels;
-using ApiProdutos.Repository;
 using ApiProdutos.Repository.Interface;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -16,12 +14,10 @@ namespace ApiProdutos.Controllers
         #region [IoC]
 
         private readonly IProdutoRepository _repository;
-        private readonly ICategoriaRepository _categoriaRepository;
 
-        public ProdutoController(IProdutoRepository repository, ICategoriaRepository categoriaRepository)
+        public ProdutoController(IProdutoRepository repository)
         {
             _repository = repository;
-            _categoriaRepository = categoriaRepository;
         }
 
         #endregion [IoC]
@@ -57,26 +53,28 @@ namespace ApiProdutos.Controllers
             return new ObjectResult(produtoDB);
         }
 
-        // POST: api/produto
-        [HttpPost("produto")]
-        public async Task<IActionResult> Post([FromBody]Produto produto)
+        
+        /// <summary>
+        /// POST: api/produto
+        /// Realiza a inserção de um novo produto.
+        /// </summary>
+        /// <param name="produto"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult Post([FromBody]Produto produto)
         {
+            //byte[] buffer = new byte[(int)Request.ContentLength];
+            //Request.Body.Read(buffer, 0, buffer.Length);
+
+            //var json = System.Text.Encoding.UTF8.GetString(buffer);
+            //var produto = Newtonsoft.Json.JsonConvert.DeserializeObject<Produto>(json);
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            //if (!string.IsNullOrEmpty(produto.Categoria.Titulo))
-            //{
-            //    var categoria = await _repository.GetTitulo(produto.Categoria.Titulo);
-            //    if (categoria == null)
-            //        await Task.Run(() => _categoriaRepository.Create(categoria));
+            produto.DataEntrada = DateTime.Now;
+            _repository.Create(produto).GetAwaiter().GetResult();
 
-            //    produto.Categoria = categoria;
-            //}
-
-            produto.DataEntrada = DateTime.Now.Date;
-            await Task.Run(() => _repository.Create(produto));
-
-            //return CreatedAtAction(nameof(GetById), new { id = produto._id }, produto);
             return new OkObjectResult(produto);
         }
 
@@ -84,7 +82,6 @@ namespace ApiProdutos.Controllers
         [HttpPut("{codigo}")]
         public async Task<IActionResult> Put(int codigo, [FromBody]Produto produto)
         {
-
             var produtoDB = await _repository.GetCodigo(codigo);
 
             if (produtoDB == null)
@@ -109,22 +106,5 @@ namespace ApiProdutos.Controllers
             return new OkResult();
         }
 
-
-
-        #region [ AUXILIARES ]
-
-        private ResultViewModel RetornoResult(bool status, string message, object data)
-        {
-            var retorno = new ResultViewModel
-            {
-                Sucess = status,
-                Message = message,
-                Data = data
-            };
-
-            return retorno;
-        }
-
-        #endregion [ AUXILIARES ]
     }
 }

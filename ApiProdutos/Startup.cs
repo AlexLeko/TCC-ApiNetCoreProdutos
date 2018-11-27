@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace ApiProdutos
 {
@@ -25,7 +27,6 @@ namespace ApiProdutos
             services.AddScoped<IApiProdutoContext, ApiProdutosContext>();
 
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
-            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 
 
             services.Configure<ConfigContext>(
@@ -35,7 +36,21 @@ namespace ApiProdutos
                     options.Database = Configuration.GetSection("MongoDb:Database").Value;
                 });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+                //.AddJsonOptions(options => {
+
+                //var settings = options.SerializerSettings;
+
+                //settings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                //settings.MissingMemberHandling = MissingMemberHandling.Ignore;
+                //settings.Formatting = Formatting.Indented;
+                //settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+                ////options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                ////options.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Include;
+                ////options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                //})
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,7 +65,7 @@ namespace ApiProdutos
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

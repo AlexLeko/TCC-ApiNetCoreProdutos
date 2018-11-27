@@ -1,5 +1,4 @@
 ﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -27,11 +26,6 @@ namespace ApiProdutos.Models
         public int Quantidade { get; set; }
         
         public DateTime? DataEntrada { get; set; }
-
-
-        public Categoria Categoria { get; set; }
-
-
 
     }
 }

@@ -67,14 +67,7 @@ namespace ApiProdutos.Repository
             return deleteResult.IsAcknowledged && deleteResult.DeletedCount > 0;
         }
 
-        public Task<Categoria> GetTitulo(string titulo)
-        {
-            FilterDefinition<Categoria> filter = Builders<Categoria>.Filter.Eq(m => m.Titulo, titulo);
-            return _context
-                    .Categorias
-                    .Find(titulo)
-                    .FirstOrDefaultAsync();
-        }
+
     }
 
     #endregion [Actions]
