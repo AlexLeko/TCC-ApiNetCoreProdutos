@@ -66,8 +66,7 @@ namespace ApiProdutos.Repository
 
             return deleteResult.IsAcknowledged && deleteResult.DeletedCount > 0;
         }
-
-
+        
     }
 
     #endregion [Actions]

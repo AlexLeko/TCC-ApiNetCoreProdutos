@@ -38,18 +38,6 @@ namespace ApiProdutos.Controllers
             if (produtoDB == null)
                 return new NotFoundResult();
 
-            //else
-            //{
-            //    var prod = new DetalheProdutosViewModel()
-            //    {
-            //        Codigo = produtoDB.Codigo,
-            //        Titulo = produtoDB.Titulo,
-            //        Descricao = produtoDB.Descricao,
-            //        Valor = produtoDB.Valor,
-            //        Categoria = produtoDB.Categoria.Titulo,
-            //    };
-            //}
-
             return new ObjectResult(produtoDB);
         }
 
@@ -63,12 +51,6 @@ namespace ApiProdutos.Controllers
         [HttpPost]
         public IActionResult Post([FromBody]Produto produto)
         {
-            //byte[] buffer = new byte[(int)Request.ContentLength];
-            //Request.Body.Read(buffer, 0, buffer.Length);
-
-            //var json = System.Text.Encoding.UTF8.GetString(buffer);
-            //var produto = Newtonsoft.Json.JsonConvert.DeserializeObject<Produto>(json);
-
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 

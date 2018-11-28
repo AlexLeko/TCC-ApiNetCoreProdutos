@@ -3,7 +3,6 @@ C:\Estudos\ApiNetCoreProdutos\ApiProdutos\bin\Debug\netcoreapp2.1\ApiProdutos.ru
 C:\Estudos\ApiNetCoreProdutos\ApiProdutos\bin\Debug\netcoreapp2.1\ApiProdutos.runtimeconfig.dev.json
 C:\Estudos\ApiNetCoreProdutos\ApiProdutos\bin\Debug\netcoreapp2.1\ApiProdutos.dll
 C:\Estudos\ApiNetCoreProdutos\ApiProdutos\bin\Debug\netcoreapp2.1\ApiProdutos.pdb
-C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.csprojResolveAssemblyReference.cache
 C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.csproj.CoreCompileInputs.cache
 C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.RazorAssemblyInfo.cache
 C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.RazorAssemblyInfo.cs
