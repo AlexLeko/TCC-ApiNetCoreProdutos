@@ -41,13 +41,6 @@ namespace ApiProdutos.Controllers
             return new ObjectResult(produtoDB);
         }
 
-        
-        /// <summary>
-        /// POST: api/produto
-        /// Realiza a inserção de um novo produto.
-        /// </summary>
-        /// <param name="produto"></param>
-        /// <returns></returns>
         [HttpPost]
         public IActionResult Post([FromBody]Produto produto)
         {
