@@ -11,4 +11,4 @@ C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.As
 C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.RazorTargetAssemblyInfo.cache
 C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.dll
 C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.pdb
-C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.csprojResolveAssemblyReference.cache
+C:\Estudos\ApiNetCoreProdutos\ApiProdutos\obj\Debug\netcoreapp2.1\ApiProdutos.csprojAssemblyReference.cache

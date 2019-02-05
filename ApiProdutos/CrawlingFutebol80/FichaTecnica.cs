@@ -9,11 +9,11 @@ namespace ApiProdutos.CrawlingFutebol80
     {
         public string NumeroJogo { get; set; }
 
-        public string Time1 { get; set; }
+        public string TimePalmeiras { get; set; }
 
         public string Resultado { get; set; }
 
-        public string Time2 { get; set; }
+        public string TimeAdversario { get; set; }
 
         public string CodigoFutebol80 { get; set; }
 
@@ -58,19 +58,22 @@ namespace ApiProdutos.CrawlingFutebol80
 
 
 
-        public void VericarMandoPartida()
-        {
-            if (!string.IsNullOrEmpty(Time1) && Time1.Equals("Palmeiras"))
-                IsMandante = true;
+        //public void VericarMandoPartida()
+        //{
+        //    if (!string.IsNullOrEmpty(Time1) && Time1.Equals("Palmeiras"))
+        //        IsMandante = true;
 
-            IsMandante = false;
-        }
+        //    IsMandante = false;
+        //}
 
         public virtual string TituloCompleto
         {
             get
             {
-                return $"Jogo {NumeroJogo} - {Time1} {Resultado} {Time2} - {CodigoFutebol80}";
+                if(IsMandante)
+                    return $"Jogo {NumeroJogo} - {TimePalmeiras} {Resultado} {TimeAdversario} - {CodigoFutebol80}";
+                else
+                    return $"Jogo {NumeroJogo} - {TimeAdversario} {Resultado} {TimePalmeiras} - {CodigoFutebol80}";
             }
             set { }
         }
